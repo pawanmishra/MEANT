@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>ACME Hackathon</title>
+
+    <!-- Style sheets -->
+    <link href="styles/bootstrap.css" rel="stylesheet" />
+</head>
+<body ng-app="teamManagement">
+    <div class="container">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <span class="navbar-brand">IMSHealth</span>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#/teams">Home</a></li>
+                        <li><a href="#/register">Register</a>
+                        <li><a href="#/edit/Punc">Edit</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <ng-view />
+    </div>
+    <!-- Library Scripts -->
+    <script src="scripts/jquery-2.1.4.min.js"></script>
+    <script src="scripts/angular.js"></script>
+    <script src="scripts/angular-resource.js"></script>
+    <script src="scripts/angular-mocks.js"></script>
+    <script src="scripts/angular-route.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    
+    <!-- Application Script -->
+    <script src="app/app.js"></script>
+    
+    <!-- Domain Classes -->
+    <script src="app/teams/team.js"></script>
+    
+    <!-- Services -->
+    <script src="app/common/common.services.js"></script>
+    <script src="app/common/dataAccessService.js"></script>
+    
+    <!-- Controllers -->
+    <script src="app/teams/teamListCtrl.js"></script>
+    <script src="app/teams/teamRegistrationCtrl.js"></script>
+</body>
+</html>

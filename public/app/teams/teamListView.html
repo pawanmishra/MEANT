@@ -1,0 +1,27 @@
+<div class="panel panel-primary"
+     ng-controller="TeamListCtrl as vm">
+	 <div class="panel-heading"
+			style="font-size:large">Search Teams
+	 </div>
+	 <div class="panel-body">
+		<div class="col-md-9">
+			<label for="teamName" class="sr-only">First Name</label>
+			<input type="text" id="teamName" ng-model="vm.teamName" class="form-control" placeholder="Team Name">
+		</div>
+		<div class="col-md-3">
+			<button ng-click="vm.searchTeams(vm.teamName, vm.log)" class="btn btn-primary btn-md btn-block">Search Teams</button>
+		</div>
+	 </div>
+	 <div class="panel-body container-fluid">
+		 <div class="col-md-3" ng-repeat="team in vm.teams">
+			 <div class="panel panel-primary">
+				<div class="panel-heading" style="font-size:large">{{team.name}}</div>
+				<div class="panel-body">
+					<ul class="list-unstyled">
+						<li ng-repeat="member in team.members" style="font-size:medium">{{ member.firstName }} {{ member.lastName }} - {{ member.EmpId }}</li>
+					</ul>
+				</div>
+			</div>
+		 </div>
+      </div>
+</div>

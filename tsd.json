@@ -1,0 +1,60 @@
+{
+  "version": "v4",
+  "repo": "borisyankov/DefinitelyTyped",
+  "ref": "master",
+  "path": "typings",
+  "bundle": "typings/tsd.d.ts",
+  "installed": {
+    "angularjs/angular-cookies.d.ts": {
+      "commit": "9ce3cd4ded7536d40b8d65264ad729f442f5a052"
+    },
+    "jquery/jquery.d.ts": {
+      "commit": "9ce3cd4ded7536d40b8d65264ad729f442f5a052"
+    },
+    "angularjs/legacy/angular-scenario-1.2.d.ts": {
+      "commit": "9ce3cd4ded7536d40b8d65264ad729f442f5a052"
+    },
+    "angularjs/angular-mocks.d.ts": {
+      "commit": "9ce3cd4ded7536d40b8d65264ad729f442f5a052"
+    },
+    "angularjs/angular-animate.d.ts": {
+      "commit": "9ce3cd4ded7536d40b8d65264ad729f442f5a052"
+    },
+    "angularjs/angular-route.d.ts": {
+      "commit": "9ce3cd4ded7536d40b8d65264ad729f442f5a052"
+    },
+    "angularjs/angular-resource.d.ts": {
+      "commit": "9ce3cd4ded7536d40b8d65264ad729f442f5a052"
+    },
+    "angularjs/angular.d.ts": {
+      "commit": "9ce3cd4ded7536d40b8d65264ad729f442f5a052"
+    },
+    "angularjs/angular-sanitize.d.ts": {
+      "commit": "9ce3cd4ded7536d40b8d65264ad729f442f5a052"
+    },
+    "express/express.d.ts": {
+      "commit": "9ce3cd4ded7536d40b8d65264ad729f442f5a052"
+    },
+    "node/node.d.ts": {
+      "commit": "9ce3cd4ded7536d40b8d65264ad729f442f5a052"
+    },
+    "serve-static/serve-static.d.ts": {
+      "commit": "9ce3cd4ded7536d40b8d65264ad729f442f5a052"
+    },
+    "mime/mime.d.ts": {
+      "commit": "9ce3cd4ded7536d40b8d65264ad729f442f5a052"
+    },
+    "body-parser/body-parser.d.ts": {
+      "commit": "9ce3cd4ded7536d40b8d65264ad729f442f5a052"
+    },
+    "mongoose/mongoose.d.ts": {
+      "commit": "9ce3cd4ded7536d40b8d65264ad729f442f5a052"
+    },
+    "gruntjs/gruntjs.d.ts": {
+      "commit": "9c7621153358a6e51ec1ad5e822697b5aba3875a"
+    },
+    "winston/winston.d.ts": {
+      "commit": "b3aeee64552e324581fdbe0926f4a96e981e451b"
+    }
+  }
+}
