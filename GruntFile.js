@@ -1,15 +1,15 @@
 module.exports = function(grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
-		ts: {
-			default: {
-				src: ['public/**/*.ts'],
-				options: {
-					sourceMap: false,
-					'module': "commonjs"
-				}
-			}
-		},
+		// ts: {
+		// 	default: {
+		// 		src: ['public/**/*.ts'],
+		// 		options: {
+		// 			sourceMap: false,
+		// 			'module': "commonjs"
+		// 		}
+		// 	}
+		// },
 		copy: {
 			main: {
 				files: [
@@ -29,7 +29,7 @@ module.exports = function(grunt) {
 		}
 	});
 	
-	grunt.loadNpmTasks('grunt-ts');
+	//grunt.loadNpmTasks('grunt-ts');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	
 	grunt.registerTask('default', ['copy']);
