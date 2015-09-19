@@ -18,7 +18,7 @@ var app;
             }
             TeamRegistrationCtrl.prototype.initializeEdit = function (teamName) {
                 var _this = this;
-                this.teamList = new app.teamList.TeamListCtrl(this.dataAccessService);
+                this.teamList = new app.teamList.TeamListCtrl(this.dataAccessService, this.$location);
                 this.teamList.searchTeams(teamName, function (items) {
                     var item = items[0];
                     _this.teamName = item.name;
@@ -34,7 +34,6 @@ var app;
             };
             TeamRegistrationCtrl.prototype.update = function () {
                 var _this = this;
-                console.log('submitted');
                 var _me = this;
                 var team = new app.domain.Team(this.teamName, this.members.length, this.members);
                 var resource = this.dataAccessService.getTeamResource();
@@ -59,7 +58,7 @@ var app;
                 this.submitted = true;
                 this.saved = false;
                 this.members = [];
-                this.message = "Some error occurred. Please try again or contact sprao@in.imshealth.com.";
+                this.message = "Some error occurred. Please try again or contact acme@acme.com.";
             };
             TeamRegistrationCtrl.prototype.remove = function (index) {
                 this.members.splice(index, 1);

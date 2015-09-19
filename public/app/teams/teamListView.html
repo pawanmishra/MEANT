@@ -15,7 +15,12 @@
 	 <div class="panel-body container-fluid">
 		 <div class="col-md-3" ng-repeat="team in vm.teams">
 			 <div class="panel panel-primary">
-				<div class="panel-heading" style="font-size:large">{{team.name}}</div>
+				<div class="panel-heading" style="font-size:large">
+					<div class="btn-group pull-right">
+						<a href="#/edit/{{team.name}}" class="btn btn-default btn-xs">Edit</a>
+						<a href="#" ng-click="vm.delete($index)" class="btn btn-default btn-xs">Delete</a>
+					</div>
+					<h4>{{team.name}}</h4></div>
 				<div class="panel-body">
 					<ul class="list-unstyled">
 						<li ng-repeat="member in team.members" style="font-size:medium">{{ member.firstName }} {{ member.lastName }} - {{ member.EmpId }}</li>

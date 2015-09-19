@@ -14,7 +14,8 @@ var app;
                     },
                     post: { method: 'POST' },
                     query: { method: 'GET', isArray: true },
-                    update: { method: 'PUT', isArray: false }
+                    update: { method: 'PUT', isArray: false },
+                    'delete': { method: 'DELETE', params: { teamName: "@teamName" } }
                 });
             };
             DataAccessService.$inject = ["$resource"];

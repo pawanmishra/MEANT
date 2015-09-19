@@ -3,8 +3,9 @@ var app;
     var teamList;
     (function (teamList) {
         var TeamListCtrl = (function () {
-            function TeamListCtrl(dataAccessService) {
+            function TeamListCtrl(dataAccessService, $location) {
                 this.dataAccessService = dataAccessService;
+                this.$location = $location;
                 this.teams = [];
             }
             TeamListCtrl.prototype.searchTeams = function (teamName, callback) {
@@ -24,10 +25,17 @@ var app;
                     callback(_me.teams);
                 });
             };
+            TeamListCtrl.prototype.delete = function (index) {
+                var deletedTeam = this.teams[index];
+                this.teams.splice(index, 1);
+                var resource = this.dataAccessService.getTeamResource();
+                resource.delete({ teamName: deletedTeam.name });
+                this.$location.path('/teams');
+            };
             TeamListCtrl.prototype.log = function (items) {
                 // do nothing
             };
-            TeamListCtrl.$inject = ["dataAccessService"];
+            TeamListCtrl.$inject = ["dataAccessService", "$location"];
             return TeamListCtrl;
         })();
         teamList.TeamListCtrl = TeamListCtrl;

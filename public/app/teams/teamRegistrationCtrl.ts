@@ -35,7 +35,7 @@ module app.teamRegistration {
 		}
 		
 		initializeEdit(teamName : string) {
-			this.teamList = new app.teamList.TeamListCtrl(this.dataAccessService);
+			this.teamList = new app.teamList.TeamListCtrl(this.dataAccessService, this.$location);
 			this.teamList.searchTeams(teamName, (items) => 
 				{
 					let item = items[0];
@@ -53,7 +53,6 @@ module app.teamRegistration {
 		}
 		
 		update(): void {
-			console.log('submitted');
 			let _me = this;
 			let team : app.domain.ITeam = new app.domain.Team(this.teamName, this.members.length, this.members);
 			let resource = this.dataAccessService.getTeamResource();
@@ -81,7 +80,7 @@ module app.teamRegistration {
 			this.submitted = true;
 			this.saved = false;
 			this.members = [];
-			this.message = "Some error occurred. Please try again or contact sprao@in.imshealth.com.";
+			this.message = "Some error occurred. Please try again or contact acme@acme.com.";
 		}
 		
 		remove(index : number): void {

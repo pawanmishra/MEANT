@@ -8,14 +8,16 @@ module app.teamList {
 		teamName : string;
 		searchTeams(teamName : string, callback : ITeamCallback) : void;
 		log(items : app.domain.ITeam[]) : void;
+		delete(index : number) : void;
 	}
 	
 	export class TeamListCtrl implements ITeamListModel {
 		teams : app.domain.ITeam[];
 		teamName : string;
 		
-		static $inject=["dataAccessService"];
-		constructor(private dataAccessService : app.common.DataAccessService) {
+		static $inject=["dataAccessService", "$location"];
+		constructor(private dataAccessService : app.common.DataAccessService,
+			private $location : ng.ILocationService) {
 			this.teams = [];
 		}
 		
@@ -35,6 +37,14 @@ module app.teamList {
 				});
 				callback(_me.teams);
 			});
+		}
+		
+		delete(index : number) : void {
+			let deletedTeam = this.teams[index];
+			this.teams.splice(index, 1);
+			var resource = this.dataAccessService.getTeamResource();
+			resource.delete({teamName : deletedTeam.name});
+			this.$location.path('/teams');
 		}
 		
 		log(items : app.domain.ITeam[]) : void {

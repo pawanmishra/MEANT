@@ -4,7 +4,6 @@ module app.common {
 	}
 	
 	interface ITeamResource extends ng.resource.IResource<app.domain.ITeam> {
-		//update(ITeam : app.domain.ITeam) : void;
 	}
 	
 	interface ITeamResourceClass extends ng.resource.IResourceClass<ITeamResource> {
@@ -27,7 +26,8 @@ module app.common {
                 },
 				post: {method:'POST'},
 				query: {method: 'GET', isArray: true },
-				update: {method: 'PUT', isArray: false}
+				update: {method: 'PUT', isArray: false},
+				'delete': {method:'DELETE', params: { teamName:"@teamName" }}
 			});
 		}
 	}
